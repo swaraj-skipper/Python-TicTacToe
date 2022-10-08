@@ -53,16 +53,16 @@ def compMove():
                 return move
 
     cornersOpen = []
+    if 5 in possibleMoves:
+        move = 5
+        return move
+    
     for i in possibleMoves:
         if i in [1,3,7,9]:
             cornersOpen.append(i)
             
     if len(cornersOpen) > 0:
         move = selectRandom(cornersOpen)
-        return move
-
-    if 5 in possibleMoves:
-        move = 5
         return move
 
     edgesOpen = []
@@ -89,7 +89,7 @@ def isBoardFull(board):
         return True
 
 def main():
-    print('Welcome to Tic Tac Toe Game!')
+    print('Welcome to Tic Tac Toe Game! ')
     print('you can use the guide to play the game')
     print('Press keys according to the position on which you want to play')
     print('*****************************************************************')
